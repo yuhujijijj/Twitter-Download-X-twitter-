@@ -1,0 +1,29 @@
+# Local configuration and credentials
+settings.local.json
+.env
+
+# Runtime output and caches
+__pycache__/
+*.py[cod]
+*.log
+*.csv
+profile/
+
+# Downloaded media and generated files
+downloads/
+*.mp4
+*.jpg
+*.jpeg
+*.png
+*.gif
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# PyInstaller build artifacts
+build/
+dist/
+*.spec
