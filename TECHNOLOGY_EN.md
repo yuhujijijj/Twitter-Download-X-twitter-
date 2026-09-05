@@ -31,6 +31,8 @@ The GUI supports Chinese (`zh-CN`) and English (`en-US`). Choose the language fr
 
 The GUI supports optional completion sounds on Windows. Set `completion_sound` to `true` to enable playback. `completion_sound_path` defaults to `sounds`; this resolves to `sounds/default.wav`. The **Preview** button plays the selected sound without starting a download. Custom WAV files can be selected from the GUI.
 
+The download page uses a resizable Canvas with mouse-wheel forwarding for child controls, so all settings remain accessible in small-window mode. `save_path` must be an existing folder selected by the user; the application does not fall back to the current directory.
+
 ## Configuration
 
 | Key | Type | Description |

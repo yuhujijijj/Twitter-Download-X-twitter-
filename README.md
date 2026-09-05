@@ -2,11 +2,21 @@
 
 English documentation: [README_EN.md](README_EN.md) | Technical documentation: [TECHNOLOGY_EN.md](TECHNOLOGY_EN.md)
 
-当前仓库地址：[yuhujijijj/Twitter-Download-X-twitter](https://github.com/yuhujijijj/Twitter-Download-X-twitter)
+当前仓库地址：[yuhujijijj/Twitter-Download-X-twitter-](https://github.com/yuhujijijj/Twitter-Download-X-twitter-)
 
 一个基于 Python 的 Twitter/X 媒体、文本、标签和评论下载工具，支持 GUI、批量用户、时间范围、断点同步以及 CSV/Markdown 输出。
 
 支持排除转推内容、多用户下载、时间范围限制、按标签搜索、纯文本下载、高级搜索和评论区下载。
+
+## 当前版本已完成
+
+- GUI 支持中文/英文切换，语言选择会保存到配置文件。
+- 下载地址必须通过“浏览”选择并保存，不再静默使用当前目录。
+- Cookie 在 GUI 中拆分为 `auth_token` 和 `ct0` 两个独立输入框，也支持 `TWITTER_COOKIE` 环境变量。
+- 小窗口模式下下载页面支持完整内容显示和鼠标滚轮滚动。
+- 支持任务完成提示音、默认 `sounds/default.wav`、自定义 WAV 文件和“试听”功能。
+- 提供 Windows 可执行程序 `dist/TwitterDownload/TwitterDownload.exe`，配置文件位于 EXE 同目录。
+- 已加入中英文 README、技术文档、示例配置和 GitHub 发布安全规则。
 
 ## 项目来源与致谢
 
@@ -17,8 +27,8 @@ English documentation: [README_EN.md](README_EN.md) | Technical documentation: [
 ## 快速开始
 
 ```bash
-git clone https://github.com/yuhujijijj/Twitter-Download-X-twitter.git
-cd Twitter-Download-X-twitter
+git clone https://github.com/yuhujijijj/Twitter-Download-X-twitter-.git
+cd Twitter-Download-X-twitter-
 python -m venv .venv
 # Windows: .venv\\Scripts\\activate
 # Linux/macOS: source .venv/bin/activate
@@ -35,6 +45,8 @@ $env:TWITTER_COOKIE = "auth_token=...; ct0=...;"
 ```
 
 然后运行 `python main.py`，或运行 `python gui.py` 使用图形界面。
+
+Windows 用户也可以直接运行 `dist/TwitterDownload/TwitterDownload.exe`。首次使用时请编辑或通过 GUI 保存 EXE 同目录下的 `settings.json`。
 
 在 GUI 的“其他选项”中勾选“任务完成时播放提示音”即可开启完成提醒；提示音路径默认为 `sounds`，点击“试听”可以提前播放，提示音文件可通过“浏览”选择自定义 `.wav` 文件，留空时使用 Windows 系统提示音。
 
@@ -120,12 +132,12 @@ elif 不包含:
 部署
 --- 
 
-> 当前仓库地址为 [yuhujijijj/Twitter-Download-X-twitter](https://github.com/yuhujijijj/Twitter-Download-X-twitter)，原始项目地址为 [caolvchong-top/twitter_download](https://github.com/caolvchong-top/twitter_download)。
+> 当前仓库地址为 [yuhujijijj/Twitter-Download-X-twitter-](https://github.com/yuhujijijj/Twitter-Download-X-twitter-)，原始项目地址为 [caolvchong-top/twitter_download](https://github.com/caolvchong-top/twitter_download)。
 
 **Linux** : 
 ``` 
-git clone https://github.com/yuhujijijj/Twitter-Download-X-twitter.git
-cd Twitter-Download-X-twitter
+git clone https://github.com/yuhujijijj/Twitter-Download-X-twitter-.git
+cd Twitter-Download-X-twitter-
 pip3 install -r requirements.txt
 
 #Python版本须>=3.8  httpx==0.28.1

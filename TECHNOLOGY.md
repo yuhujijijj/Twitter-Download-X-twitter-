@@ -139,8 +139,11 @@
 | media_count_limit | int | 媒体数量限制 |
 | completion_sound | bool | 任务完成后是否播放提示音 |
 | completion_sound_path | string | 提示音路径，默认 `sounds`，目录内使用 `default.wav` |
+| language | string | 界面语言：`zh-CN` 或 `en-US` |
 
 GUI 支持在“其他选项”中点击“试听”预览当前提示音。提示音支持 Windows WAV 文件；任务完成播放不会阻塞下载流程。
+
+下载地址 `save_path` 必须是用户主动选择并保存的已有文件夹；GUI 不会在空路径时回退到当前目录。小窗口模式通过 Canvas 和鼠标滚轮支持完整浏览下载设置。
 
 ### 错误处理
 

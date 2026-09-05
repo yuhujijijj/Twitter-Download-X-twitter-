@@ -1,6 +1,6 @@
 # Twitter Download
 
-Repository: [yuhujijijj/Twitter-Download-X-twitter](https://github.com/yuhujijijj/Twitter-Download-X-twitter)
+Repository: [yuhujijijj/Twitter-Download-X-twitter-](https://github.com/yuhujijijj/Twitter-Download-X-twitter-)
 
 A Python GUI and command-line tool for downloading media, text, hashtag results, replies, and profile data from Twitter/X.
 
@@ -20,17 +20,29 @@ A Python GUI and command-line tool for downloading media, text, hashtag results,
 - Optional completion sound with WAV preview and custom sound selection
 - Chinese and English GUI language selection
 
+## Completed Improvements
+
+- Chinese/English GUI language switching with a persisted setting
+- Required download-folder selection; the application never silently falls back to the current directory
+- Separate `auth_token` and `ct0` Cookie fields, plus `TWITTER_COOKIE` environment-variable support
+- Full content visibility and mouse-wheel scrolling in small-window mode
+- Completion sound support with bundled `sounds/default.wav`, custom WAV selection, and preview
+- Windows executable at `dist/TwitterDownload/TwitterDownload.exe`; its `settings.json` is kept beside the executable
+- Chinese and English README files, technical documentation, sample configuration, and GitHub safety rules
+
 ## Quick Start
 
 ```bash
-git clone https://github.com/yuhujijijj/Twitter-Download-X-twitter.git
-cd Twitter-Download-X-twitter
+git clone https://github.com/yuhujijijj/Twitter-Download-X-twitter-.git
+cd Twitter-Download-X-twitter-
 python -m venv .venv
 # Windows: .venv\\Scripts\\activate
 # Linux/macOS: source .venv/bin/activate
 python -m pip install -r requirements.txt
 python gui.py
 ```
+
+Windows users can also run `dist/TwitterDownload/TwitterDownload.exe`. On first use, select a download folder and save the `settings.json` located beside the executable.
 
 Copy `settings.example.json` to `settings.json`. Before the first download, click **Browse** in the GUI and select an existing download folder. The application intentionally does not fall back to the current directory.
 
