@@ -17,6 +17,10 @@ downloads/
 *.png
 *.gif
 
+# Documentation screenshots
+!screenshots/
+!screenshots/*.png
+
 # IDE and OS files
 .vscode/
 .idea/
