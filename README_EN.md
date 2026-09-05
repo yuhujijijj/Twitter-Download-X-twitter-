@@ -58,4 +58,18 @@ Use the **Language** selector at the top of the GUI to choose Chinese or English
 
 Enable **Play sound when finished** in the Other Options section. The default path is `sounds`, which uses `sounds/default.wav`. Click **Preview** to test it before downloading. You can replace the default WAV file or select another WAV file with **Browse**.
 
+## Interface Preview
+
+**Download window (English)**
+
+![Download window (English)](screenshots/download-EN.png)
+
+**Sync Management**
+
+![Sync Management](screenshots/sync.png)
+
+**Log Center**
+
+![Log Center](screenshots/logs.png)
+
 See [TECHNOLOGY_EN.md](TECHNOLOGY_EN.md) for the architecture and configuration reference.

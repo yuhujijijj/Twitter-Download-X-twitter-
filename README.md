@@ -142,8 +142,24 @@ _filter = ""
 实例参考：https://github.com/caolvchong-top/twitter_download/issues/63#issuecomment-2351039320 & https://github.com/caolvchong-top/twitter_download/issues/106
 
 
-效果预览
+当前界面效果
 ---
+**下载界面（中文）**
+
+![下载界面（中文）](screenshots/download-CN.png)
+
+**同步管理**
+
+![同步管理](screenshots/sync.png)
+
+**日志中心**
+
+![日志中心](screenshots/logs.png)
+
+以下为原项目的历史效果图，仅作功能参考。
+
+## 原项目历史效果参考
+
 ![20230720134231](https://github.com/caolvchong-top/twitter_download/assets/57820488/ee6a1c13-2b0c-47e9-a260-1ac529bec678) 
 
 
