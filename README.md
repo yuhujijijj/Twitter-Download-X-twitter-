@@ -50,13 +50,6 @@ Windows 用户也可以直接运行 `dist/TwitterDownload/TwitterDownload.exe`�
 
 在 GUI 的“其他选项”中勾选“任务完成时播放提示音”即可开启完成提醒；提示音路径默认为 `sounds`，点击“试听”可以提前播放，提示音文件可通过“浏览”选择自定义 `.wav` 文件，留空时使用 Windows 系统提示音。
 
-### 安全说明
-
-- Cookie 是登录凭据。请勿提交真实 Cookie、下载结果、日志或个人路径。
-- 发布前请确认 `settings.json` 中的 `cookie` 为空；`.gitignore` 已忽略运行产物。
-- 如果 Cookie 曾经出现在公开仓库中，请立即在 Twitter/X 端注销相关会话并重新获取。
-- 仅下载你有权访问和保存的内容，并遵守 Twitter/X 的服务条款和适用法律。
-
 ---
 **目前老马加了API的请求次数限制** 
 ``` 
@@ -71,54 +64,6 @@ elif 不包含:
 下载不计入次数 
 ```
 
-# Change Log 
-* **2025-08-09** 
-  * 支持获取用户主页内容(头像&banner&简介)--**请直接配置profile_down.py文件并运行**
-
-* **2025-04-26** 
-  * 替换部分失效接口 
-  * `tag_down reply_down`增加`X-Client-Transaction-ID`校验, 请重新运行`pip install -r requirements.txt`安装依赖 
-  * // 目前生成的`transaction-id`仍有小概率失效, 当程序抛出`获取数据失败`时可以尝试重新运行 
-  * 目前`main text_down`似乎未受`X-Client-Transaction-ID`校验影响 
-  * Reference: `https://github.com/iSarabjitDhiman/XClientTransaction`
-
-* **2025-03-03** 
-  * 支持下载评论区(指定用户或推文链接)--**请直接配置reply_down.py文件并运行**
-
-* **2024-05-24** 
-  * 按Tag获取支持保存文本内容 
-
-* **2024-05-11**
-  * 支持获取纯文本推文--**请直接配置text_down.py文件并运行**
-    
-    // (下方有预览) 注意，此功能会大量消耗API次数(参考上方公式)，默认排除转推内容
-* **2024-05-10**
-  * 支持按Tag获取--**请直接配置tag_down.py文件并运行**
-  
-    // 保存格式 (下方有预览)：. / {#Tag} / {datetime} \_ {@username} \_ { md5( media_url )[:4] } . { png / mp4 }
-
-* **2024-03-09**
-  * 支持记录已下载内容,避免重复下载 (如有问题请发issue)
-  * 支持自动同步最新内容
-* **2024-01-16**
-  * 适配 [ **喜欢(Likes)** ] 标签页 
-* **2024-01-10**
-  * 新增统计数据 [ **Favorite, Retweet, Reply** ]
-* **2024-01-05**
-  * 适配Twieer新标签页 [ **亮点(HighLights)** ]
-* **2023-12-12**
-  * 适配Twitter新API
-* **2023-10-12**
-  * 添加 生成爬取信息 功能
-* **2023-10-06**
-  * 添加 时间范围限制 功能
-  * 统一文件保存格式
-    * 文件夹：用户id (@后面的)
-    * 文件：推文日期-[img/vid]_下载计数.文件后缀
-      
-* **2023-09-15**
-  * 添加 视频下载 功能
- 
 ---
 
 <div align="center"> 

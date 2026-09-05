@@ -58,11 +58,4 @@ Use the **Language** selector at the top of the GUI to choose Chinese or English
 
 Enable **Play sound when finished** in the Other Options section. The default path is `sounds`, which uses `sounds/default.wav`. Click **Preview** to test it before downloading. You can replace the default WAV file or select another WAV file with **Browse**.
 
-## Security and Usage
-
-- Cookies are login credentials. Never commit real cookies, logs, downloads, or personal paths.
-- If a Cookie was exposed publicly, revoke the related session and obtain a new one.
-- Download only content you are authorized to access and save.
-- Respect Twitter/X terms of service and applicable laws.
-
 See [TECHNOLOGY_EN.md](TECHNOLOGY_EN.md) for the architecture and configuration reference.
