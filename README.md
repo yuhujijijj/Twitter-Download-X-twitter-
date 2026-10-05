@@ -15,6 +15,7 @@ English documentation: [README_EN.md](README_EN.md) | Technical documentation: [
 - Cookie 在 GUI 中拆分为 `auth_token` 和 `ct0` 两个独立输入框，也支持 `TWITTER_COOKIE` 环境变量。
 - 小窗口模式下下载页面支持完整内容显示和鼠标滚轮滚动。
 - 支持任务完成提示音、默认 `sounds/default.wav`、自定义 WAV 文件和“试听”功能。
+- 修复 Windows EXE 中同步管理扫描失败和同步页面布局异常。
 - Windows 用户可在项目根目录通过 `TwitterDownload.spec` 自行构建 EXE；目前仓库不提供预编译 ZIP/Release 附件。
 - 已加入中英文 README、技术文档、示例配置和 GitHub 发布安全规则。
 

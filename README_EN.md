@@ -27,6 +27,7 @@ A Python GUI and command-line tool for downloading media, text, hashtag results,
 - Separate `auth_token` and `ct0` Cookie fields, plus `TWITTER_COOKIE` environment-variable support
 - Full content visibility and mouse-wheel scrolling in small-window mode
 - Completion sound support with bundled `sounds/default.wav`, custom WAV selection, and preview
+- Fixed sync scan import failure and sync-page layout in the Windows executable
 - Windows users can build the executable from `TwitterDownload.spec` in the repository root. No prebuilt ZIP or GitHub Release asset is currently provided.
 - Chinese and English README files, technical documentation, sample configuration, and GitHub safety rules
 

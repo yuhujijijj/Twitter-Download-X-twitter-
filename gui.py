@@ -187,6 +187,7 @@ class TwitterDownloadGUI:
         style.configure("TNotebook.Tab", padding=(18, 10), font=("Microsoft YaHei", 10, "bold"))
         style.map("TNotebook.Tab", background=[("selected", "#ffffff"), ("active", "#eaf2ff")], foreground=[("selected", "#0d1f40")])
         style.configure("Treeview", background="#ffffff", fieldbackground="#ffffff", rowheight=28, font=("Microsoft YaHei", 9))
+        style.map("Treeview", background=[("selected", "#2d7ff9")], foreground=[("selected", "#ffffff")])
         style.configure("Treeview.Heading", font=("Microsoft YaHei", 10, "bold"), background="#dfeaff", foreground="#1d2b42")
         style.map("Treeview.Heading", background=[("active", "#cfe0ff")])
 
@@ -393,7 +394,9 @@ class TwitterDownloadGUI:
         sync_tab = ttk.Frame(self.notebook, padding="10")
         self.notebook.add(sync_tab, text="同步管理")
 
-        sync_tab.grid_rowconfigure(2, weight=1)
+        sync_tab.grid_rowconfigure(1, weight=0)
+        sync_tab.grid_rowconfigure(2, weight=0)
+        sync_tab.grid_rowconfigure(3, weight=1)
         sync_tab.grid_columnconfigure(0, weight=1)
 
         self.build_header(sync_tab, "同步管理", "查看本地用户状态并更新已选内容")
@@ -407,8 +410,9 @@ class TwitterDownloadGUI:
         ttk.Entry(path_frame, textvariable=self.sync_path_var, width=50).grid(row=0, column=1, sticky=tk.EW, pady=5)
         ttk.Button(path_frame, text="浏览", command=self.sync_browse_path).grid(row=0, column=2, padx=5, pady=5)
 
-        button_frame = ttk.Frame(sync_tab)
+        button_frame = ttk.Frame(sync_tab, height=42)
         button_frame.grid(row=2, column=0, sticky=tk.EW, pady=(0, 10))
+        button_frame.grid_propagate(False)
 
         ttk.Button(button_frame, text="开始检测文件夹", command=self.sync_scan_users, style="Accent.TButton").pack(side=tk.LEFT, padx=5)
         ttk.Button(button_frame, text="扫描用户", command=self.sync_scan_users, style="TButton").pack(side=tk.LEFT, padx=5)
@@ -433,6 +437,7 @@ class TwitterDownloadGUI:
         self.sync_tree.column('name', width=150)
         self.sync_tree.column('file_count', width=80, anchor=tk.CENTER)
         self.sync_tree.column('last_download', width=120, anchor=tk.CENTER)
+        self.sync_tree.tag_configure('selected', background='#2d7ff9', foreground='#ffffff')
         
         scrollbar_y = ttk.Scrollbar(tree_frame, orient=tk.VERTICAL, command=self.sync_tree.yview)
         scrollbar_y.pack(side=tk.RIGHT, fill=tk.Y)
