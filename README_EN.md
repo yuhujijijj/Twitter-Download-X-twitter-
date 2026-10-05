@@ -27,7 +27,7 @@ A Python GUI and command-line tool for downloading media, text, hashtag results,
 - Separate `auth_token` and `ct0` Cookie fields, plus `TWITTER_COOKIE` environment-variable support
 - Full content visibility and mouse-wheel scrolling in small-window mode
 - Completion sound support with bundled `sounds/default.wav`, custom WAV selection, and preview
-- Windows executable at `dist/TwitterDownload/TwitterDownload.exe`; its `settings.json` is kept beside the executable
+- Download the Windows executable package from [GitHub Releases](https://github.com/yuhujijijj/Twitter-Download-X-twitter-/releases/latest). Extract the archive and run `app/TwitterDownload.exe`; configure the download folder and Cookie on first use.
 - Chinese and English README files, technical documentation, sample configuration, and GitHub safety rules
 
 ## Quick Start
@@ -42,7 +42,7 @@ python -m pip install -r requirements.txt
 python gui.py
 ```
 
-Windows users can also run `dist/TwitterDownload/TwitterDownload.exe`. On first use, select a download folder and save the `settings.json` located beside the executable.
+Windows users can download and extract the release ZIP from [GitHub Releases](https://github.com/yuhujijijj/Twitter-Download-X-twitter-/releases/latest), then run `app/TwitterDownload.exe`. Keep all files in the `app` folder together. Select a download folder and configure the Cookie in the GUI on first use.
 
 Copy `settings.example.json` to `settings.json`. Before the first download, click **Browse** in the GUI and select an existing download folder. The application intentionally does not fall back to the current directory.
 

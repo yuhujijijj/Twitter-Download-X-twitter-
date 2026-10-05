@@ -30,4 +30,7 @@ Thumbs.db
 # PyInstaller build artifacts
 build/
 dist/
-*.spec
+
+# Local packaged app and generated release archive (publish as a GitHub Release asset)
+/app/
+/TwitterDownload-windows-x64.zip

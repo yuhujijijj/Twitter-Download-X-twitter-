@@ -15,7 +15,7 @@ English documentation: [README_EN.md](README_EN.md) | Technical documentation: [
 - Cookie 在 GUI 中拆分为 `auth_token` 和 `ct0` 两个独立输入框，也支持 `TWITTER_COOKIE` 环境变量。
 - 小窗口模式下下载页面支持完整内容显示和鼠标滚轮滚动。
 - 支持任务完成提示音、默认 `sounds/default.wav`、自定义 WAV 文件和“试听”功能。
-- 提供 Windows 可执行程序 `dist/TwitterDownload/TwitterDownload.exe`，配置文件位于 EXE 同目录。
+- Windows 可执行程序可从 [GitHub Releases](https://github.com/yuhujijijj/Twitter-Download-X-twitter-/releases/latest) 下载。解压后运行 `app/TwitterDownload.exe`，首次使用需在程序中设置下载目录和 Cookie。
 - 已加入中英文 README、技术文档、示例配置和 GitHub 发布安全规则。
 
 ## 项目来源与致谢
@@ -46,7 +46,7 @@ $env:TWITTER_COOKIE = "auth_token=...; ct0=...;"
 
 然后运行 `python main.py`，或运行 `python gui.py` 使用图形界面。
 
-Windows 用户也可以直接运行 `dist/TwitterDownload/TwitterDownload.exe`。首次使用时请编辑或通过 GUI 保存 EXE 同目录下的 `settings.json`。
+Windows 用户可从 [GitHub Releases](https://github.com/yuhujijijj/Twitter-Download-X-twitter-/releases/latest) 下载并解压发布 ZIP，然后运行 `app/TwitterDownload.exe`。请保留 `app` 文件夹中的全部文件；首次使用时在 GUI 中选择下载目录并设置 Cookie。
 
 在 GUI 的“其他选项”中勾选“任务完成时播放提示音”即可开启完成提醒；提示音路径默认为 `sounds`，点击“试听”可以提前播放，提示音文件可通过“浏览”选择自定义 `.wav` 文件，留空时使用 Windows 系统提示音。
 
