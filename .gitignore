@@ -31,6 +31,6 @@ Thumbs.db
 build/
 dist/
 
-# Local packaged app and generated release archive (publish as a GitHub Release asset)
+# Local packaged app and optional local archive (not committed)
 /app/
 /TwitterDownload-windows-x64.zip

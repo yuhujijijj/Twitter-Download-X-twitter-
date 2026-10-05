@@ -27,7 +27,7 @@ A Python GUI and command-line tool for downloading media, text, hashtag results,
 - Separate `auth_token` and `ct0` Cookie fields, plus `TWITTER_COOKIE` environment-variable support
 - Full content visibility and mouse-wheel scrolling in small-window mode
 - Completion sound support with bundled `sounds/default.wav`, custom WAV selection, and preview
-- Download the Windows executable package from [GitHub Releases](https://github.com/yuhujijijj/Twitter-Download-X-twitter-/releases/latest). Extract the archive and run `app/TwitterDownload.exe`; configure the download folder and Cookie on first use.
+- Windows users can build the executable from `TwitterDownload.spec` in the repository root. No prebuilt ZIP or GitHub Release asset is currently provided.
 - Chinese and English README files, technical documentation, sample configuration, and GitHub safety rules
 
 ## Quick Start
@@ -42,7 +42,17 @@ python -m pip install -r requirements.txt
 python gui.py
 ```
 
-Windows users can download and extract the release ZIP from [GitHub Releases](https://github.com/yuhujijijj/Twitter-Download-X-twitter-/releases/latest), then run `app/TwitterDownload.exe`. Keep all files in the `app` folder together. Select a download folder and configure the Cookie in the GUI on first use.
+### Build the Windows executable
+
+Open PowerShell in the repository root on Windows, install the application dependencies and PyInstaller, then build the spec:
+
+```powershell
+python -m pip install -r requirements.txt
+python -m pip install pyinstaller
+python -m PyInstaller --clean --noconfirm TwitterDownload.spec
+```
+
+The complete application folder is created at `dist/app`. Run `TwitterDownload.exe` inside it. To use it on another PC, copy the entire `app` folder, not just the EXE. Set the download folder and Cookie in the GUI on first launch. The spec creates the initial configuration from `settings.example.json`, which contains no personal Cookie. This spec targets Windows x64 and should be built on Windows.
 
 Copy `settings.example.json` to `settings.json`. Before the first download, click **Browse** in the GUI and select an existing download folder. The application intentionally does not fall back to the current directory.
 
